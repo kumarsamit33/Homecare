@@ -1,0 +1,15 @@
+:host ::ng-deep li a{
+    color: #a9a9a9;
+    img:last-child{
+        display: none;
+    }
+    &.active{
+        color:#000 !important; 
+        img:last-child{
+            display: block !important;
+        }
+        img:first-child{
+            display: none;
+        }
+    }
+}
