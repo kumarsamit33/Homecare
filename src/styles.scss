@@ -1,28 +1,59 @@
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
-
-@font-face {
-    font-family: poppins-light;
-    src: url(./assets/fonts/Poppins-Light.ttf);
-}
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
 
 @font-face {
     font-family: poppins-regular;
     src: url(./assets/fonts/Poppins-Regular.ttf);
 }
 
-@font-face {
-    font-family: poppins-semibold;
-    src: url(./assets/fonts/Poppins-SemiBold.ttf);
-}
-
-@font-face {
-    font-family: poppins-bold;
-    src: url(./assets/fonts/Poppins-Bold.ttf);
-}
-
 *{
     box-sizing: border-box;
     font-family: poppins-regular;
+}
+
+// mat snackbar
+
+.easy-snackStyle{
+    &.snack-success{
+        background: #44b444;
+        color: #fff;
+
+        .mdc-snackbar__surface{
+            background: #44b444 !important;
+            color: #fff !important;
+        }
+    }
+    &.snack-error{
+        background: #f33333;
+        color: #fff;
+
+        .mdc-snackbar__surface{
+            background: #f33333 !important;
+            color: #fff !important;
+        }
+    }
+
+    &.mat-mdc-snack-bar-container{
+        margin: 8px;
+        border-radius: 4px;
+        // width: 400px;
+        // max-width: 80%;
+    }
+
+    .mat-mdc-snack-bar-action{
+        color: #fff !important;
+        background: rgba(0,0,0,0.1) !important;
+        font-size: 14px;
+        border-radius: 4px;
+        padding: 4px 9px;
+        min-width: auto;
+        height: auto;
+    }
+}
+
+.mat-mdc-simple-snack-bar {
+    display: flex;
+    align-items: baseline;
 }
